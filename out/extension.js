@@ -24,6 +24,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deactivate = exports.activate = void 0;
+// GitHub Repository: https://github.com/accesswatch/aa_toggle
 const vscode = __importStar(require("vscode"));
 const MODE_KEY = "accessibilityAlert.mode";
 const ORIGINAL_SETTINGS_KEY = "accessibilityAlert.originalSettings";

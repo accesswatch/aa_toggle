@@ -1,3 +1,4 @@
+// GitHub Repository: https://github.com/accesswatch/aa_toggle
 import * as vscode from "vscode";
 
 const MODE_KEY = "accessibilityAlert.mode";
