@@ -194,9 +194,6 @@ function activate(context) {
         };
         statusBarItem.show();
     }
-    function announceModeChange() {
-        vscode.window.showInformationMessage(`Accessibility alert mode is now ${mode}`);
-    }
     async function applySettings(settings) {
         const config = vscode.workspace.getConfiguration();
         const updatePromises = Object.keys(settings).map((key) => {
@@ -238,7 +235,6 @@ function activate(context) {
                 }
             }
             updateStatusBar();
-            announceModeChange();
             vscode.window.setStatusBarMessage(`Accessibility alert mode: ${mode}`, 2000);
         }
         catch (err) {

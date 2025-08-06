@@ -54,11 +54,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Repository
 
-[GitHub Repository](https://github.com/example-publisher/accessibility-alert-toggle)
+[GitHub Repository](https://github.com/accesswatch/aa_toggle)
 
 ## Issues
 
-Report issues or feature requests on the [GitHub Issues page](https://github.com/example-publisher/accessibility-alert-toggle/issues).
+Report issues or feature requests on the [GitHub Issues page](https://github.com/accesswatch/aa_toggle/issues).
 
 ## Release Notes
 

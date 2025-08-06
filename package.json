@@ -6,12 +6,12 @@
   "publisher": "JeffBishop",
   "repository": {
     "type": "git",
-    "url": "https://github.com/example-publisher/accessibility-alert-toggle"
+    "url": "https://github.com/accesswatch/aa_toggle"
   },
   "bugs": {
-    "url": "https://github.com/example-publisher/accessibility-alert-toggle/issues"
+    "url": "https://github.com/accesswatch/aa_toggle/issues"
   },
-  "homepage": "https://github.com/example-publisher/accessibility-alert-toggle#readme",
+  "homepage": "https://github.com/accesswatch/aa_toggle#readme",
   "keywords": [
     "accessibility",
     "alert",
