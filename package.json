@@ -1,0 +1,78 @@
+{
+  "name": "accessibility-alert-toggle",
+  "displayName": "Accessibility Alert Toggle",
+  "description": "Toggle accessibility alert mode (quiet/normal) with hotkey, status bar indicator, ARIA alert, and global volume persistence.",
+  "version": "0.0.1",
+  "publisher": "JeffBishop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example-publisher/accessibility-alert-toggle"
+  },
+  "bugs": {
+    "url": "https://github.com/example-publisher/accessibility-alert-toggle/issues"
+  },
+  "homepage": "https://github.com/example-publisher/accessibility-alert-toggle#readme",
+  "keywords": [
+    "accessibility",
+    "alert",
+    "toggle",
+    "screen reader",
+    "status bar"
+  ],
+  "engines": {
+    "vscode": ">=1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:accessibilityAlert.toggle",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "accessibilityAlert.toggle",
+        "title": "Toggle Accessibility Alert Mode"
+      },
+      {
+        "command": "accessibilityAlert.help",
+        "title": "Accessibility Alert Toggle: Help"
+      },
+      {
+        "command": "accessibilityAlert.feedback",
+        "title": "Accessibility Alert Toggle: Send Feedback"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "accessibilityAlert.toggle",
+        "key": "alt+shift+s",
+        "when": "true"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Accessibility Alert Toggle",
+      "properties": {
+        "accessibilityAlert.statusBarPriority": {
+          "type": "number",
+          "default": 100,
+          "description": "Priority of the status bar item (higher = more left)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "@vscode/test-electron": "^2.5.2",
+    "typescript": "^4.8.4"
+  },
+  "license": "MIT"
+}
