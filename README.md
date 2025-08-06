@@ -1,6 +1,6 @@
 # Accessibility Alert Toggle
 
-![Extension Icon](images/icon.png)
+August 6, 2025
 
 This VS Code extension allows you to toggle accessibility alert mode between quiet and normal using a hotkey (`Alt+Shift+S`). The current mode is shown in the status bar, and changes are announced for screen readers. All accessibility signal settings, including volume, are managed automatically.
 
@@ -24,6 +24,37 @@ This VS Code extension allows you to toggle accessibility alert mode between qui
 ## Extension Settings
 
 - `accessibilityAlert.statusBarPriority`: Priority of the status bar item (higher = more left).
+
+## What Does This Extension Do?
+
+This extension empowers users—especially those using screen readers or who want a distraction-free environment—to quickly toggle all accessibility alerts in VS Code between “quiet” and “normal” modes. In “quiet” mode, all accessibility signals (such as sounds and spoken announcements for code actions, errors, chat, etc.) are silenced by setting their volume to 0. In “normal” mode, your preferred volume and alert settings are restored, ensuring you never lose your custom configuration.
+
+This is ideal for:
+
+- Users who want to temporarily silence all accessibility notifications (for focus, presentations, or privacy).
+- Screen reader users who want a fast way to reduce or restore VS Code’s spoken feedback.
+- Anyone who wants a single hotkey to manage all accessibility signal noise.
+
+## What Settings Does It Touch?
+
+The extension manages the following VS Code settings globally (across all workspaces):
+
+- **`accessibility.signalOptions.volume`**  
+  Controls the master volume for all accessibility signals.
+
+  - `0` = silent/quiet mode (no sounds or spoken alerts)
+  - Any other value = your preferred volume for normal mode
+
+- **`accessibility.signals.*`**  
+  These settings control the sound and announcement behavior for specific events in VS Code (e.g., editing, debugging, chat, errors, warnings, etc.).
+  - Example:
+    - `accessibility.signals.codeActionApplied.sound`
+    - `accessibility.signals.codeActionApplied.announcement`
+  - Values:
+    - `"never"` = never play a sound or announcement
+    - `"always"` = always play a sound or announcement
+
+When toggling, the extension sets all these to “quiet” (no sound, no announcement) or restores your previous settings for “normal” mode.
 
 ## Accessibility Notes
 
