@@ -2,7 +2,7 @@
   "name": "accessibility-alert-toggle",
   "displayName": "Accessibility Alert Toggle",
   "description": "Toggle accessibility alert mode (quiet/normal) with hotkey, status bar indicator, ARIA alert, and global volume persistence.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "JeffBishop",
   "repository": {
     "type": "git",
@@ -27,6 +27,20 @@
   ],
   "activationEvents": [
     "onCommand:accessibilityAlert.toggle",
+    "onCommand:accessibilityAlert.help",
+    "onCommand:accessibilityAlert.feedback",
+    "onCommand:accessibilityAlert.configureGroups",
+    "onCommand:accessibilityAlert.setVolume",
+    "onCommand:accessibilityAlert.toggleGroup",
+    "onCommand:accessibilityAlert.resetDefaults",
+    "onCommand:accessibilityAlert.manageModes",
+    "onCommand:accessibilityAlert.changeModePriority",
+    "onCommand:accessibilityAlert.saveSelectionAsMode",
+    "onCommand:accessibilityAlert.quickSwitchMode",
+    "onCommand:accessibilityAlert.previewEffectiveSettings",
+    "onCommand:accessibilityAlert.exportModes",
+    "onCommand:accessibilityAlert.importModes",
+    "onCommand:accessibilityAlert.diagnose",
     "onStartupFinished"
   ],
   "main": "./out/extension.js",
@@ -43,6 +57,54 @@
       {
         "command": "accessibilityAlert.feedback",
         "title": "Accessibility Alert Toggle: Send Feedback"
+      },
+      {
+        "command": "accessibilityAlert.configureGroups",
+        "title": "Accessibility Alert Toggle: Configure Groups & Modes"
+      },
+      {
+        "command": "accessibilityAlert.setVolume",
+        "title": "Accessibility Alert Toggle: Set Volume"
+      },
+      {
+        "command": "accessibilityAlert.toggleGroup",
+        "title": "Accessibility Alert Toggle: Toggle Group"
+      },
+      {
+        "command": "accessibilityAlert.resetDefaults",
+        "title": "Accessibility Alert Toggle: Reset to Defaults"
+      },
+      {
+        "command": "accessibilityAlert.manageModes",
+        "title": "Accessibility Alert Toggle: Manage Modes"
+      },
+      {
+        "command": "accessibilityAlert.changeModePriority",
+        "title": "Accessibility Alert Toggle: Change Mode Priority"
+      },
+      {
+        "command": "accessibilityAlert.saveSelectionAsMode",
+        "title": "Accessibility Alert Toggle: Save Selection as Mode"
+      },
+      {
+        "command": "accessibilityAlert.quickSwitchMode",
+        "title": "Accessibility Alert Toggle: Quick Switch Mode"
+      },
+      {
+        "command": "accessibilityAlert.previewEffectiveSettings",
+        "title": "Accessibility Alert Toggle: Preview Effective Settings"
+      },
+      {
+        "command": "accessibilityAlert.exportModes",
+        "title": "Accessibility Alert Toggle: Export Custom Modes"
+      },
+      {
+        "command": "accessibilityAlert.importModes",
+        "title": "Accessibility Alert Toggle: Import Custom Modes"
+      },
+      {
+        "command": "accessibilityAlert.diagnose",
+        "title": "Accessibility Alert Toggle: Diagnose Accessibility Alerts"
       }
     ],
     "keybindings": [
@@ -67,11 +129,16 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package --no-dependencies",
+    "publish:marketplace": "vsce publish"
   },
   "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.2.1",
     "@types/vscode": "^1.70.0",
     "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.0.0",
     "typescript": "^4.8.4"
   },
   "license": "MIT"
